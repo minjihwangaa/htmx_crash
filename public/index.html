@@ -3,9 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>htmx crash course</title>
   </head>
   <body>
-    hello
+    <!-- request.html -->
+    <!-- temperature.html -->
+    <!-- polling.html -->
+    <!-- search.html -->
+    <form class="max-w-md mx-auto p-6 rounded-lg bg-blue-200">
+      <h1 class="text-2xl font-bold mb-4">Contact us</h1>
+      <div class="mb-6" hx-target="this" hx-swap="outerHTML">
+        <label for="lastName" class="block text-gray-700 text-sm font-bold mb-2"
+          >Email Address</label
+        >
+        <input
+          type="email"
+          hx-post="/contact/email"
+          name="email"
+          class="border rounded-lg py-2 px-3 w-full focus:outline-none focus:border-blue-500"
+          id="email"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label for="lastName" class="block text-gray-700 text-sm font-bold mb-2"
+          >First name</label
+        >
+        <input
+          type="text"
+          name="firstName"
+          class="border rounded-lg py-2 px-3 w-full focus:outline-none focus:border-blue-500"
+          id="firstName"
+          required
+        />
+      </div>
+      <div class="mb-6">
+        <label for="lastName" class="block text-gray-700 text-sm font-bold mb-2"
+          >Last name</label
+        >
+        <input
+          type="text"
+          name="lastName"
+          class="border rounded-lg py-2 px-3 w-full focus:outline-none focus:border-blue-500"
+          id="lastName"
+          required
+        />
+      </div>
+      <div class="flex items-center justify-between">
+        <button
+          class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
   </body>
 </html>

@@ -1,0 +1,31 @@
+<span class="htmx-indicator" id="loading"> loading.. </span>
+<h3 class="text-2xl mb-3 text-center">Search contacts</h3>
+<input
+  type="search"
+  name="search"
+  placeholder="Begin Typing to search users"
+  class="border border-gray-600 bg-gray-800 p-2 rounded-lg w-full mb-5"
+  hx-post="/search"
+  hx-trigger="input changed delay:500ms, search"
+  hx-target="#search-results"
+  hx-indicator="#loading"
+/>
+<table class="min-w-full divide-y divide-gray-200">
+  <thead class="bg-gray-800 text-white">
+    <tr>
+      <th
+        class="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider"
+        scope="col"
+      >
+        name
+      </th>
+      <th
+        class="px-6 py-3 text-center text-xs font-medium uppercase tracking-wider"
+        scope="col"
+      >
+        email
+      </th>
+      <tbody id="search-results" class="divide-y divide-gray-600"></tbody>
+    </tr>
+  </thead>
+</table>
