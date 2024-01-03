@@ -1,0 +1,17 @@
+{
+  "name": "htmx",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Minji Hwang",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
